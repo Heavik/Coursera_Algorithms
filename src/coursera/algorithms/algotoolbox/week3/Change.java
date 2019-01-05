@@ -1,4 +1,4 @@
-//package coursera.algorithms.algotoolbox.week3;
+package coursera.algorithms.algotoolbox.week3;
 
 import java.util.Scanner;
 
