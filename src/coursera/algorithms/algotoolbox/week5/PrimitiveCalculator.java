@@ -19,9 +19,9 @@ public class PrimitiveCalculator {
         return sequence;
     }
     
-    private static int selectValue(int[] sequenceArr, int currentNum, int num) {
-        int value1 = currentNum % 3 == 0 ? sequenceArr[currentNum / 3] : num;
-        int value2 = currentNum % 2 == 0 ? sequenceArr[currentNum / 2] : num;
+    private static int selectValue(int[] sequenceArr, int currentNum) {
+        int value1 = currentNum % 3 == 0 ? sequenceArr[currentNum / 3] : Integer.MAX_VALUE;
+        int value2 = currentNum % 2 == 0 ? sequenceArr[currentNum / 2] : Integer.MAX_VALUE;
         int value3 = sequenceArr[currentNum - 1];
         
         int value;
@@ -44,13 +44,13 @@ public class PrimitiveCalculator {
         sequenceArr[0] = 0;
               
         for(int i = 1; i <= n; i++) {
-            int value = selectValue(sequenceArr, i, n);
+            int value = selectValue(sequenceArr, i);
             sequenceArr[i] = sequenceArr[value] + 1;
         }
         
         sequence.add(n);
         while(n > 0) {
-            int value = selectValue(sequenceArr, n, n);
+            int value = selectValue(sequenceArr, n);
             if(value != 0) {
                 sequence.add(value);
             }
