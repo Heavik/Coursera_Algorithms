@@ -1,3 +1,15 @@
+/* Organizing a Lottery
+ * Description: You are given a set of points on a line and a set of segments on a line. The goal is to compute, for
+ * each point, the number of segments that contain this point.
+ *
+ * Input: The first line contains two non-negative integers 𝑠 and 𝑝 defining the number of segments
+ * and the number of points on a line, respectively. The next 𝑠 lines contain two integers 𝑎𝑖, 𝑏𝑖 defining
+ * the 𝑖-th segment [𝑎𝑖, 𝑏𝑖]. The next line contains 𝑝 integers defining points 𝑥1, 𝑥2,..., 𝑥𝑝.
+ *
+ * Output: Output 𝑝 non-negative integers 𝑘0, 𝑘1, . . . , 𝑘[𝑝−1] where 𝑘𝑖 is the number of segments which contain 𝑥𝑖.
+ *
+ * Constraints: 1 ≤ 𝑠,𝑝 ≤ 50000; −10^8 ≤ 𝑎𝑖 ≤ 𝑏𝑖 ≤ 10^8 for all 0 ≤ 𝑖 < 𝑠; −10^8 ≤ 𝑥𝑗 ≤ 10^8 for all 0 ≤ 𝑗 < 𝑝.
+ */
 package coursera.algorithms.algotoolbox.week4;
 
 import java.util.Arrays;

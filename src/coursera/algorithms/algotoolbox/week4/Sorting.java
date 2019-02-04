@@ -1,3 +1,14 @@
+/* Improving Quick Sort
+ * Description: To force the given implementation of the quick sort algorithm to efficiently process sequences with
+ * few unique elements, your goal is replace a 2-way partition with a 3-way partition. That is, your new
+ * partition procedure should partition the array into three parts: <𝑥 part, =𝑥 part, and >𝑥 part.
+ *
+ * Input: The first line of the input contains an integer 𝑛. The next line contains a sequence of 𝑛 integers 𝑎0, 𝑎1,...,𝑎[𝑛−1].
+ *
+ * Output: Output this sequence sorted in non-decreasing order.
+ *
+ * Constraints: 1 ≤ 𝑛 ≤ 10^5; 1 ≤ 𝑎𝑖 ≤ 10^9 for all 0 ≤ 𝑖 < 𝑛.
+ */
 package coursera.algorithms.algotoolbox.week4;
 
 import java.io.*;
@@ -62,10 +73,6 @@ public class Sorting {
         int t = a[l];
         a[l] = a[k];
         a[k] = t;
-        //use partition3
-        //int m = partition2(a, l, r);
-        //randomizedQuickSort(a, l, m - 1);
-        //randomizedQuickSort(a, m + 1, r);
         int[] m = partition3(a, l, r);
         randomizedQuickSort(a, l, m[0] - 1);
         randomizedQuickSort(a, m[1] + 1, r);

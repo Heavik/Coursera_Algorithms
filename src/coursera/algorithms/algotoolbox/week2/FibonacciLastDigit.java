@@ -1,8 +1,16 @@
+/* Last Digit of a Large Fibonacci Number
+ * Description: Given an integer 𝑛, find the last digit of the 𝑛th Fibonacci number 𝐹𝑛 (that is, 𝐹𝑛 mod 10). 
+ *
+ * Input: The input consists of a single integer 𝑛.
+ * Output: Output the last digit of 𝐹𝑛.
+ * Constraints: 0 ≤ 𝑛 ≤ 10^7.
+ */
 package coursera.algorithms.algotoolbox.week2;
 
 import java.util.*;
 
 public class FibonacciLastDigit {
+
     private static int getFibonacciLastDigit(int n) {
         if (n <= 1) {
             return n;
@@ -18,7 +26,7 @@ public class FibonacciLastDigit {
 
         return fibonacciLastDigits[n];
     }
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();

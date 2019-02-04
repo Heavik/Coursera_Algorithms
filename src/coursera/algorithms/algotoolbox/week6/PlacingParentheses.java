@@ -1,3 +1,14 @@
+/* Maximum Value of an Arithmetic Expression
+ * Description: Find the maximum value of an arithmetic expression by specifying the order of applying its arithmetic
+ * operations using additional parentheses.
+ *
+ * Input: The only line of the input contains a string 𝑠 of length 2𝑛 + 1 for some 𝑛, with symbols 𝑠0, 𝑠1,...,𝑠2𝑛.
+ * Each symbol at an even position of 𝑠 is a digit (that is, an integer from 0 to 9) while each symbol at an odd position is one of three operations from {+,-,*}.
+ *
+ * Output: Output the maximum possible value of the given arithmetic expression among different orders of applying arithmetic operations.
+ *
+ * Constraints: 1 ≤ 𝑛 ≤ 14 (hence the string contains at most 29 symbols).
+ */
 package coursera.algorithms.algotoolbox.week6;
 
 import java.util.Scanner;
