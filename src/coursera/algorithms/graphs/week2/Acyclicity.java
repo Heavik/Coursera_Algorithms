@@ -1,4 +1,4 @@
-//package coursera.algorithms.graphs.week2;
+package coursera.algorithms.graphs.week2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
