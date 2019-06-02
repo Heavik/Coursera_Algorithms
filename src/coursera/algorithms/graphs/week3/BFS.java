@@ -1,4 +1,4 @@
-//package coursera.algorithms.graphs.week3;
+package coursera.algorithms.graphs.week3;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
