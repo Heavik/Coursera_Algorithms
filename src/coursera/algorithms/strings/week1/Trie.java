@@ -6,7 +6,9 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Trie {
+
     class FastScanner {
+
         StringTokenizer tok = new StringTokenizer("");
         BufferedReader in;
 
@@ -15,8 +17,9 @@ public class Trie {
         }
 
         String next() throws IOException {
-            while (!tok.hasMoreElements())
+            while (!tok.hasMoreElements()) {
                 tok = new StringTokenizer(in.readLine());
+            }
             return tok.nextToken();
         }
 
@@ -26,26 +29,26 @@ public class Trie {
     }
 
     List<Map<Character, Integer>> buildTrie(String[] patterns) {
-       List<Map<Character, Integer>> trie = new ArrayList<Map<Character, Integer>>();
-       trie.add(new HashMap<>());
-       int nodeCount = 0;
-       for(String pattern : patterns) {
-           Map<Character, Integer> currentNode = trie.get(0);
-           int patternLength = pattern.length();
-           for(int i = 0; i < patternLength; i++) {
-               char currentSymbol = pattern.charAt(i);
-               if (currentNode.containsKey(currentSymbol)) {
-                   currentNode = trie.get(currentNode.get(currentSymbol));
-               } else {
+        List<Map<Character, Integer>> trie = new ArrayList<Map<Character, Integer>>();
+        trie.add(new HashMap<>());
+        int nodeCount = 0;
+        for (String pattern : patterns) {
+            Map<Character, Integer> currentNode = trie.get(0);
+            int patternLength = pattern.length();
+            for (int i = 0; i < patternLength; i++) {
+                char currentSymbol = pattern.charAt(i);
+                if (currentNode.containsKey(currentSymbol)) {
+                    currentNode = trie.get(currentNode.get(currentSymbol));
+                } else {
                     currentNode.put(currentSymbol, ++nodeCount);
                     Map<Character, Integer> newNode = new HashMap<>();
                     trie.add(newNode);
                     currentNode = newNode;
-               }
-               }
-           }
+                }
+            }
+        }
         return trie;
-       }
+    }
 
     static public void main(String[] args) throws IOException {
         new Trie().run();
